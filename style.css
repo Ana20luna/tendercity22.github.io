@@ -1,0 +1,420 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+.body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    background: #fffbfb;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background: #f5b375;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header {
+    height: 75vh !important;
+    background: url(img/Fondo.jpg) no-repeat center;
+    background-size: cover;
+}
+
+
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	10% { transform: translateX(0); }
+
+	15% { transform: translateX(-100%); }
+	30% { transform: translateX(-100%); }
+
+	35% { transform: translateX(-200%); }
+	50% { transform: translateX(-200%); }
+
+	55% { transform: translateX(-300%); }
+	70% { transform: translateX(-300%); }
+
+	75% { transform: translateX(-400%); }
+	90% { transform: translateX(-400%); }
+
+	95% { transform: translateX(-500%); }
+	100% { transform: translateX(-500%); }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+	font-family: sans-serif;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.slider {
+	position: relative;
+}
+
+.slides {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+
+.slide {
+	width: 100vw;
+	flex-shrink: 0;
+	animation-name: slide;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.slides:hover .slide {
+	animation-play-state: paused;
+}
+
+.slide img {
+	width: 100%;
+	vertical-align: top;
+}
+
+.slide a {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+
+.caption {
+	color: white;
+	text-shadow: 1px 1px black;
+	font-size: 8vw;
+	position: absolute;
+	bottom: 8vw;
+	right: 4vw;
+}
+
+.slide:target {
+	animation-name: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+}
+
+.slider-controler {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 2 px;
+	background-color: rgb(168,220,207);
+	z-index: 100;
+}
+
+.slider-controler li {
+	margin: 0 0.5rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: rgb(249, 254, 253);
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1200px) {
+	.slide {
+		width: 1200px;
+	}
+
+	.caption {
+		font-size: 96px;
+		bottom: 96px;
+		right: 50px;
+	}
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgb(15, 15, 15);
+    text-align: center
+}
+
+p {
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: rgb(5, 5, 5);
+    padding: 0 100px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 41px;
+    border: 2px solid #f5b375;
+    color: rgb(12, 11, 11);
+    text-decoration: none;
+    background: #f5b375;
+}
+
+.btn:hover {
+    background: none;
+    
+}
+
+.btn-home {
+    display: flex;
+}
+
+.btn-home a {
+    margin: 0 10px;
+}
+
+
+
+.content {
+    height: 66vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sau {
+    padding: 35px;
+    background: #f6f1f1
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+
+.box-container .box {
+    height: 11rem;
+    width: 17rem;
+    background: rgb(244,130,067);
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .1rem 5rem rgb(244, 199, 147);
+    margin: 2rem;   
+}
+
+.box-container .box i {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: rgb(9, 9, 9);
+    background: rgb(168, 220, 207);
+    font-size: 2rem;
+    margin: 1rem 0;
+
+}
+
+.box-container .box h3 {
+    font-size: 20px;
+    color: #0d0d0d;
+
+}
+
+.box-container .box p {
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.about {
+    background: #adcbf2;
+}
+
+.price {
+    background: rgb(244, 130, 067);
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+.about-services{
+    background: rgb(255,254,174);
+    padding-bottom: 30px;
+}
+.servicio-cont{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicio-ind{
+    width: 28%;
+    text-align: center;
+}
+
+.servicio-ind img{
+    width: 70%;
+}
+
+.servicio-ind h3{
+    margin: 10px 0;
+}
+
+.servicio-ind p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+.contact {
+    padding-top: 20px;
+    background: rgb(248, 248, 245);
+    padding-bottom: 0;
+}
+
+
+.contenedor_r i{
+    text-align: center;
+    font-size: 30px;
+    color: #fbfcfc;
+    margin: 20px;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0px 5px rgb(12, 11, 11);
+    transition: .3s ease;
+}
+
+.fa-youtube {
+    background-color: #adcbf2;
+    color: rgb(244, 236, 236);
+    box-shadow: 0 0 15px rgb(114, 135, 205)
+                0 0 45px rgb(114, 135, 205)
+                0 0 75px rgb(12, 11, 11)
+                0 0 115px rgb(168, 220, 207);
+}
+
+.fa-instagram{
+    background-color: #adcbf2;
+    color: rgb(244, 236, 236);
+    box-shadow: 0 0 15px rgb(114, 135, 205)
+                0 0 45px rgb(114, 135, 205)
+                0 0 75px rgb(12, 11, 11)
+                0 0 115px rgb(168, 220, 207);
+}
+.fa-whatsapp {
+    background-color: #adcbf2;
+    color: rgb(244, 236, 236);
+    box-shadow: 0 0 15px rgb(114, 135, 205)
+                0 0 45px rgb(114, 135, 205)
+                0 0 75px rgb(12, 11, 11)
+                0 0 115px rgb(168, 220, 207);
+}
+.fa-google {
+    background-color: #adcbf2;
+    color: rgb(244, 236, 236);
+    box-shadow: 0 0 15px rgb(114, 135, 205)
+                0 0 45px rgb(114, 135, 205)
+                0 0 75px rgb(12, 11, 11)
+                0 0 115px rgb(168, 220, 207);
+}
+
+
+
+@media (max-width: 768px) {
+
+    .title {
+        margin-bottom: 0;
+        font-size: 30px;
+    }
+
+    .sau {
+        height: 100vh;
+    }
+
+    .navbar {
+        display: none;
+    }
+   
+    .servicio-cont{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .servicio-ind{
+        width: 100%;
+        text-align: center;
+    }
+
+    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+        margin-bottom: 60px;
+    }
+
+    .servicio-ind img{
+        width: 90%;
+    }
+    
+}
+
+
+
